@@ -1,15 +1,18 @@
 package org.example.testParsingString;
 
-import java.util.Scanner;
+import org.springframework.stereotype.Service;
 
-public class Parser {
-    public static String parser(String string) {
+import java.util.*;
+
+@Service
+public class LettersCountServiceImpl {
+    public LetterCountResponse pars(String string) {
         Scanner scanner = new Scanner(string);
         String input = scanner.nextLine();
         char[] chars = input.toCharArray();
 
         int count;
-        String value = "dick";
+        String value = "";
         int max = 1;
 
         for (Character c : chars) {
@@ -24,6 +27,6 @@ public class Parser {
                 }
             }
         }
-        return value + " " + max;
+        return new LetterCountResponse(value,max);
     }
 }
