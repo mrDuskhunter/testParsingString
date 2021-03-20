@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/wordanalyzer")
-public class ControllerV1 {
+public class WordAnalyzeController {
     @Autowired
     private LettersCountServiceImpl service;
 

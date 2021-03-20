@@ -16,4 +16,22 @@ public class LetterCountResponse {
     public long getCount() {
         return count;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        LetterCountResponse that = (LetterCountResponse) o;
+
+        if (count != that.count) return false;
+        return letter != null ? letter.equals(that.letter) : that.letter == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = letter != null ? letter.hashCode() : 0;
+        result = 31 * result + (int) (count ^ (count >>> 32));
+        return result;
+    }
 }
