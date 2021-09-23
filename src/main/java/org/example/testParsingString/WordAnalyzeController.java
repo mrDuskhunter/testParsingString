@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/wordanalyzer")
 public class WordAnalyzeController {
     @Autowired
-    private LettersCountServiceImpl service;
+    private LettersCountService service;
 
     @GetMapping("/analyze")
     public LetterCountResponse analyze(@RequestParam(value = "word") String word) {

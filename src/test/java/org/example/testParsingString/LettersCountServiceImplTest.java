@@ -19,16 +19,15 @@ public class LettersCountServiceImplTest {
 
     @Test
     public void lettersCountServiceImplStringTest() {
-        LettersCountServiceImpl lettersCountService = new LettersCountServiceImpl();
+        LettersCountService lettersCountService = new LettersCountService();
         LetterCountResponse expectedResult = lettersCountService.pars("test");
         Assert.assertEquals(expectedResult, actualResultMap.get("test"));
     }
 
     @Test
     public void lettersCountServiceImplStringTester() {
-        LettersCountServiceImpl lettersCountService = new LettersCountServiceImpl();
+        LettersCountService lettersCountService = new LettersCountService();
         LetterCountResponse expectedResult = lettersCountService.pars("tester");
         Assert.assertEquals(expectedResult, actualResultMap.get("tester"));
     }
-
 }
